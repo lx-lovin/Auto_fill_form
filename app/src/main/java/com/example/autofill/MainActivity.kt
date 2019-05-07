@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         data = arrayListOf()
         usernames = arrayListOf()
         username.threshold = 1
-        //IRCTC Login
         var database: SQLiteDatabase = this.openOrCreateDatabase("SavedData", Context.MODE_PRIVATE,null)
         database.execSQL("CREATE TABLE IF NOT EXISTS saved(username VARCHAR,password VARCHAR,fromm VARCHAR,too VARCHAR,date VARCHAR,name VARCHAR,age INT(10),contact VARCHAR)")
         var c: Cursor = database.rawQuery("SELECT * FROM saved",null)
@@ -89,11 +88,15 @@ class MainActivity : AppCompatActivity() {
 
                 if(username==tempusername){
                     var intent:Intent=Intent(this,BookingActivity::class.java)
+                    intent.putExtra("username",username)
+                    intent.putExtra("password",password)
                     startActivity(intent)
                 }else {
                     database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
                     Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                     var intent: Intent = Intent(this, BookingActivity::class.java)
+                    intent.putExtra("username",username)
+                    intent.putExtra("password",password)
                     startActivity(intent)
                 }
             }
@@ -139,6 +142,8 @@ class MainActivity : AppCompatActivity() {
                 database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
                 Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                 var intent: Intent = Intent(this, BookingActivity::class.java)
+                intent.putExtra("username",username)
+                intent.putExtra("password",password)
                 startActivity(intent)
             }
         }
@@ -163,8 +168,6 @@ class MainActivity : AppCompatActivity() {
         username.requestFocus()
 
 
-
-        //IRCTC Login
         var database: SQLiteDatabase = this.openOrCreateDatabase("SavedData", Context.MODE_PRIVATE,null)
         database.execSQL("CREATE TABLE IF NOT EXISTS saved(username VARCHAR,password VARCHAR,fromm VARCHAR,too VARCHAR,date VARCHAR,name VARCHAR,age INT(4),contact VARCHAR)")
         var c: Cursor = database.rawQuery("SELECT * FROM saved",null)
@@ -232,11 +235,15 @@ class MainActivity : AppCompatActivity() {
 
                 if(username==tempusername){
                     var intent:Intent=Intent(this,BookingActivity::class.java)
+                    intent.putExtra("username",username)
+                    intent.putExtra("password",password)
                     startActivity(intent)
                 }else {
                     database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
                     Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                     var intent: Intent = Intent(this, BookingActivity::class.java)
+                    intent.putExtra("username",username)
+                    intent.putExtra("password",password)
                     startActivity(intent)
                 }
             }
@@ -283,6 +290,8 @@ class MainActivity : AppCompatActivity() {
                 database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
                 Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                 var intent: Intent = Intent(this, BookingActivity::class.java)
+                intent.putExtra("username",username)
+                intent.putExtra("password",password)
                 startActivity(intent)
             }
         }
