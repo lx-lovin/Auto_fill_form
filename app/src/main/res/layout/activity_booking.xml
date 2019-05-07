@@ -6,12 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".BookingActivity">
-    <TextView android:layout_width="match_parent"
-              android:text="Now Restart app and start typing IRCTC username "
-              android:textSize="50dp"
-              android:gravity="center"
-              android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+    <WebView android:layout_width="match_parent"
+             android:id="@+id/webView"
+             android:layout_height="match_parent"/>
 
 </android.support.constraint.ConstraintLayout>
