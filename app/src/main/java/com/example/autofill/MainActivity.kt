@@ -90,6 +90,11 @@ class MainActivity : AppCompatActivity() {
                     var intent:Intent=Intent(this,BookingActivity::class.java)
                     intent.putExtra("username",username)
                     intent.putExtra("password",password)
+                    intent.putExtra("from",from)
+                    intent.putExtra("to",to)
+                    intent.putExtra("date",date)
+                    intent.putExtra("name",name)
+                    intent.putExtra("age",age)
                     startActivity(intent)
                 }else {
                     database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
@@ -97,6 +102,11 @@ class MainActivity : AppCompatActivity() {
                     var intent: Intent = Intent(this, BookingActivity::class.java)
                     intent.putExtra("username",username)
                     intent.putExtra("password",password)
+                    intent.putExtra("from",from)
+                    intent.putExtra("to",to)
+                    intent.putExtra("date",date)
+                    intent.putExtra("name",name)
+                    intent.putExtra("age",age)
                     startActivity(intent)
                 }
             }
@@ -144,6 +154,11 @@ class MainActivity : AppCompatActivity() {
                 var intent: Intent = Intent(this, BookingActivity::class.java)
                 intent.putExtra("username",username)
                 intent.putExtra("password",password)
+                intent.putExtra("from",from)
+                intent.putExtra("to",to)
+                intent.putExtra("date",date)
+                intent.putExtra("name",name)
+                intent.putExtra("age",age)
                 startActivity(intent)
             }
         }
@@ -237,6 +252,11 @@ class MainActivity : AppCompatActivity() {
                     var intent:Intent=Intent(this,BookingActivity::class.java)
                     intent.putExtra("username",username)
                     intent.putExtra("password",password)
+                    intent.putExtra("from",from)
+                    intent.putExtra("to",to)
+                    intent.putExtra("date",date)
+                    intent.putExtra("name",name)
+                    intent.putExtra("age",age)
                     startActivity(intent)
                 }else {
                     database.execSQL("INSERT INTO saved (username,password,fromm,too,date,name,age,contact) VALUES ('" + username + "','" + password + "','" + from + "','" + to + "','" + date + "','" + name + "'," + age + ",'" + gender + "')")
@@ -244,6 +264,11 @@ class MainActivity : AppCompatActivity() {
                     var intent: Intent = Intent(this, BookingActivity::class.java)
                     intent.putExtra("username",username)
                     intent.putExtra("password",password)
+                    intent.putExtra("from",from)
+                    intent.putExtra("to",to)
+                    intent.putExtra("name",name)
+                    intent.putExtra("age",age)
+                    intent.putExtra("date",date)
                     startActivity(intent)
                 }
             }
@@ -292,6 +317,11 @@ class MainActivity : AppCompatActivity() {
                 var intent: Intent = Intent(this, BookingActivity::class.java)
                 intent.putExtra("username",username)
                 intent.putExtra("password",password)
+                intent.putExtra("from",from)
+                intent.putExtra("to",to)
+                intent.putExtra("date",date)
+                intent.putExtra("name",name)
+                intent.putExtra("age",age)
                 startActivity(intent)
             }
         }
